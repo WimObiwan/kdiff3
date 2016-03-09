@@ -2609,10 +2609,11 @@ QString MergeResultWindow::getSelection()
                for( int i=0; i<str.length(); ++i )
                {
                   int spaces = 1;
-                  if ( str[i]=='\t' )
-                  {
-                     spaces = tabber( outPos, m_pOptions->m_tabSize );
-                  }
+                  // 2016-03-09: Fixed annoying problem when copying / cutting text from the merge pane, when tabs were present before the selection position.
+                  //if ( str[i]=='\t' )
+                  //{
+                  //   spaces = tabber( outPos, m_pOptions->m_tabSize );
+                  //}
 
                   if( m_selection.within( line, outPos ) )
                   {
