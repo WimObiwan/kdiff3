@@ -1,2 +1,5 @@
 *.o
 moc_*.cpp
+*.autosave
+*.user
+build-*/
